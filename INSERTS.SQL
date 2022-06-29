@@ -38,14 +38,19 @@ VALUES
 INSERT INTO cuentas
 (id, id_currency, id_user, name, description)
 VALUES
-(1, 1, 2, 'Caja de ahorro', 'ca en pesos de Lorena'),
-(2, 2, 3, 'Tarjeta de credito usd', 'tc de Gonzalo'),
-(3, 3, 3, 'Tarjeta de credito eur', 'tc de Gonzalo');
+(1, 1, 2, 'Tarjeta de debito', 'ca en pesos de Lorena'),
+(2, 1, 1, 'tarjeta de credito ars', 'tc visa de Martin'),
+(3, 2, 3, 'Tarjeta de credito ars', 'tc visa de Gonzalo'),
+(4, 3, 3, 'Tarjeta de credito eur', 'tc mastercard de Gonzalo');
 
 INSERT INTO transacciones
 (id, date, id_user, id_category, id_subcategory, id_account, detail, amount)
 VALUES
-(1, '2022-03-25 18:54:23', 2, 2, 3, 1, 'Remera', 5000);
+(1, '2022-03-25 18:54:23', 2, 2, 3, 1, 'remera', 5000),
+(2, '2022-04-04 08:32:10', 1, 1, 2, 2, 'compra mensual Coto', 18000),
+(3, '2022-04-23 12:45:29', 3, 1, 1, 2, 'cena en palermo', 3000),
+(4, '2022-05-12 16:26:17', 2, 5, 10, 1, 'mensual netflix', 15);
+
 
 
 
