@@ -26,7 +26,7 @@ VALUES (CURRENT_DATE(), CURRENT_TIME(), SESSION_USER(), concat(
  NEW.user
  ));
 
-2)  #Estas sentencias crean una tabla y luego un Trigger que escribe cuando se actualiza una categoria#
+#2)Estas sentencias crean una tabla y luego un Trigger que escribe cuando se actualiza una categoria#
 DROP TRIGGER IF EXISTS before_actualizar_categoria; 
 CREATE TRIGGER before_actualizar_categoria
 BEFORE UPDATE ON categoria
