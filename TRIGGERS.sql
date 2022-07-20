@@ -27,6 +27,16 @@ VALUES (CURRENT_DATE(), CURRENT_TIME(), SESSION_USER(), concat(
  ));
 
 #2)Estas sentencias crean una tabla y luego un Trigger que escribe cuando se actualiza una categoria#
+ DROP TABLE IF EXISTS log_actualizacion_de_categoria;
+ CREATE TABLE log_actualizacion_de_categoria (
+	id INT AUTO_INCREMENT,
+    date DATE,
+    time TIME,
+    user VARCHAR(30),
+    description VARCHAR(1000),
+    PRIMARY KEY (id)
+); 
+
 DROP TRIGGER IF EXISTS before_actualizar_categoria; 
 CREATE TRIGGER before_actualizar_categoria
 BEFORE UPDATE ON categoria
